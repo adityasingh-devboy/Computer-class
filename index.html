@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AKSHAT COMPUTER CLASSES</title>
+  <meta name="description" content="AKSHAT COMPUTER CLASSES — Learn computer skills, access PDF notes, take quizzes, verify certificates, and contact us." />
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Inter', 'system-ui', 'ui-sans-serif', 'Segoe UI', 'Roboto'],
+          },
+          keyframes: {
+            glow: {
+              '0%, 100%': { boxShadow: '0 0 0px rgba(250,204,21,0.0)' },
+              '50%': { boxShadow: '0 0 30px rgba(250,204,21,0.55)' },
+            },
+            shimmer: {
+              '0%': { transform: 'translateX(-100%)' },
+              '100%': { transform: 'translateX(200%)' },
+            },
+          },
+          animation: {
+            glow: 'glow 2.2s ease-in-out infinite',
+            shimmer: 'shimmer 1.8s linear infinite',
+          },
+          colors: {
+            brandYellow: '#FACC15', // yellow-400/500 vibe
+            brandBlack: '#0b0b0b',
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    /* Hide pages by default; JS will toggle */
+    .page { display: none; }
+    .page.active { display: block; }
+    
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-brandBlack via-black to-brandYellow text-white font-display selection:bg-yellow-300 selection:text-black">
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-black/50 border-b border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+      <a href="#home" data-route class="flex items-center gap-3 group">
+       <a href="#home" data-route class="flex items-center gap-3 group">
+  <!-- Custom Logo -->
+  <img src="ChatGPT_Image_Sep_6__2025__02_55_46_PM-removebg-preview.png" alt="Logo" class="h-20 w-20 object-contain rounded-lg shadow-md bg-black/90 p-1" />
+  <div>
+    <div class="text-lg sm:text-xl font-extrabold leading-none text-yellow-400">
+      AKSHAT COMPUTER CLASSES
+    </div>
+    <div class="text-xs text-yellow-300/80 -mt-0.5">Learn • Practice • Succeed</div>
+  </div>
+</a>
+
+      </a>
+
+      <nav class="hidden md:flex items-center gap-4">
+        <a href="#home" data-route class="px-3 py-2 rounded-xl hover:bg-white/10">Home</a>
+        <a href="#reviews" data-route class="px-3 py-2 rounded-xl hover:bg-white/10">Reviews</a>
+        <a href="#all-courses" data-route class="px-3 py-2 rounded-xl hover:bg-white/10">All Courses</a>
+        <a href="#notes" data-route class="px-3 py-2 rounded-xl hover:bg-white/10">PDF Notes</a>
+        <a href="#quiz" data-route class="px-3 py-2 rounded-xl hover:bg-white/10">Quiz</a>
+        <a href="#verify" data-route class="px-3 py-2 rounded-xl hover:bg-white/10">Verify Certificate</a>
+        <a href="#contact" data-route class="px-3 py-2 rounded-xl hover:bg-white/10">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a href="auth.html"><button id="btnOpenAuth" class="px-4 py-2 rounded-xl bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-bold shadow-lg hover:shadow-yellow-500/40 transition active:scale-[.98]"><a href="auth.html">Login / Register</a></button></a>
+        <button class="md:hidden px-3 py-2 rounded-xl bg-white/10" id="btnMobileMenu" aria-label="Toggle Menu">☰</button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileNav" class="md:hidden hidden border-t border-white/10">
+      <div class="px-4 py-2 grid grid-cols-2 gap-2">
+        <a href="#home" data-route class="px-3 py-2 rounded-xl hover:bg-white/10">Home</a>
+        <a href="#reviews" data-route class="px-3 py-2 rounded-xl hover:bg-white/10">Reviews</a>
+        <a href="#all-courses" data-route class="px-3 py-2 rounded-xl hover:bg-white/10">All</a>
+        <a href="#notes" data-route class="px-3 py-2 rounded-xl hover:bg-white/10">Notes</a>
+        <a href="#quiz" data-route class="px-3 py-2 rounded-xl hover:bg-white/10">Quiz</a>
+        <a href="#verify" data-route class="px-3 py-2 rounded-xl hover:bg-white/10">Verify</a>
+        <a href="#contact" data-route class="px-3 py-2 rounded-xl hover:bg-white/10">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 space-y-20">
+
+    <!-- PAGE: HOME (INTRO) -->
+  <!-- PAGE: HOME (FULL HOMEPAGE with 4 sections) -->
+<section id="home" class="page active space-y-20">
+
+  <!-- HERO / INTRO -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">
+        Upgrade Your <span class="text-brandYellow">Computer Skills</span>
+      </h1>
+      <p class="mt-4 text-white/80 text-lg">AKSHAT COMPUTER CLASSES mein aapko practical training milti hai — Office, Design, Programming, aur zyada. Start karne ke liye bass ek click!</p>
+      <div class="mt-8">
+        <a href="#courses" data-route
+           class="px-7 py-3.5 rounded-2xl bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-extrabold shadow-lg hover:shadow-yellow-500/40 transition active:scale-[.98]">
+          Start Learning →
+        </a>
+      </div>
+    </div>
+    <div class="relative">
+      <div class="relative rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl">
+        <ul class="space-y-4 text-white/90">
+          <li>✅ Small batches, personalized attention</li>
+          <li>✅ Job-oriented syllabus & real projects</li>
+          <li>✅ PDF notes, quizzes, and certificates</li>
+          <li>✅ Direct WhatsApp enrollment: 
+            <a class="text-brandYellow font-semibold" target="_blank" href="https://wa.me/919540126204">+91 9540126204</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- COURSES PREVIEW -->
+  <div id="coursesPreview">
+    <h2 class="text-4xl font-extrabold mb-6">Popular Courses</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="coursesGrid"></div>
+    <a href="#all-courses" data-route class="mt-6 inline-block px-5 py-3 rounded-xl bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-bold shadow-lg">View All Courses</a>
+  </div>
+
+  <!-- REVIEWS -->
+  <div id="reviewsPreview">
+    <h2 class="text-3xl font-extrabold mb-6">Student Reviews</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+        <p class="text-white/90">“Office course ke baad mujhe internship mil gayi. Notes aur practice sheets bahut helpful thi.”</p>
+        <div class="mt-4 text-yellow-300">★★★★★</div>
+        <div class="mt-1 text-sm text-white/70">— Riya Sharma</div>
+      </article>
+      <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+        <p class="text-white/90">“Basics se web development clear hua. Quiz se revision easy ho gaya. Recommended!”</p>
+        <div class="mt-4 text-yellow-300">★★★★★</div>
+        <div class="mt-1 text-sm text-white/70">— Mohit Verma</div>
+      </article>
+    </div>
+  </div>
+
+</section>
+    <!-- PAGE: REVIEWS -->
+    <section id="reviews" class="page">
+      <h2 class="text-3xl font-extrabold mb-6">Student Reviews</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <p class="text-white/90">“Office course ke baad mujhe internship mil gayi. Notes aur practice sheets bahut helpful thi.”</p>
+          <div class="mt-4 text-yellow-300">★★★★★</div>
+          <div class="mt-1 text-sm text-white/70">— Riya Sharma</div>
+        </article>
+        <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <p class="text-white/90">“Basics se web development clear hua. Quiz se revision easy ho gaya. Recommended!”</p>
+          <div class="mt-4 text-yellow-300">★★★★★</div>
+          <div class="mt-1 text-sm text-white/70">— Mohit Verma</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PAGE: ALL COURSES (SECOND PAGE) -->
+    <section id="all-courses" class="page">
+      <h2 class="text-3xl font-extrabold mb-6">All Courses</h2>
+      <div id="allCoursesGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </section>
+
+    <!-- PAGE: PDF NOTES (THIRD PAGE) -->
+    <section id="notes" class="page">
+      <h2 class="text-3xl font-extrabold mb-6">PDF Notes</h2>
+      <p class="text-white/80 mb-4">Har card par click karte hi WhatsApp par direct message jayega for instant access.</p>
+      <div id="notesGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </section>
+
+    <!-- PAGE: QUIZ (FOURTH PAGE) -->
+    <section id="quiz" class="page">
+      <h2 class="text-3xl font-extrabold mb-6">Computer Basics Quiz</h2>
+      <form id="quizForm" class="space-y-6"></form>
+      <button id="submitQuiz" class="mt-4 px-5 py-3 rounded-2xl bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-bold shadow-lg">Submit & Check Score</button>
+      <div id="quizResult" class="mt-4 text-xl font-bold"></div>
+    </section>
+
+    <!-- PAGE: CERTIFICATE VERIFICATION (FIFTH PAGE) -->
+    <section id="verify" class="page">
+      <h2 class="text-3xl font-extrabold mb-6">Certificate Verification</h2>
+      <div class="max-w-xl rounded-2xl border border-white/10 bg-white/5 p-6">
+        <label class="block text-sm text-white/80 mb-2" for="certId">Enter Certificate ID</label>
+        <input id="certId" type="text" placeholder="e.g., AKS-2025-00123" class="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+        <button id="btnVerify" class="mt-4 px-5 py-3 rounded-2xl bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-bold shadow-lg">Verify</button>
+        <div id="verifyResult" class="mt-4"></div>
+      </div>
+    </section>
+
+    <!-- PAGE: CONTACT (LAST PAGE) -->
+    <section id="contact" class="page">
+      <h2 class="text-3xl font-extrabold mb-6">Contact Us</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <form id="contactForm" class="rounded-2xl border border-white/10 bg-white/5 p-6 space-y-4">
+          <input type="text" required placeholder="Your Name" class="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 focus:outline-none focus:ring-2 focus:ring-yellow-400"/>
+          <input type="email" required placeholder="Email" class="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 focus:outline-none focus:ring-2 focus:ring-yellow-400"/>
+          <textarea required placeholder="Message" class="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 focus:outline-none focus:ring-2 focus:ring-yellow-400" rows="5"></textarea>
+          <button class="px-5 py-3 rounded-2xl bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-bold shadow-lg">Send Message</button>
+          <p class="text-sm text-white/70">Or WhatsApp: <a class="text-brandYellow font-semibold" target="_blank" href="https://wa.me/919540126204?text=Hi%20AKSHAT%20Classes">+91 9540126204</a></p>
+        </form>
+
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h3 class="text-xl font-bold mb-3">Center Info</h3>
+          <ul class="space-y-2 text-white/80">
+            <li>📍 Address: Your Institute Address Here</li>
+            <li>📞 Phone/WhatsApp: +91 9540126204</li>
+            <li>⏰ Timings: 8:00 AM — 8:00 PM</li>
+            <li>✉️ Email: info@akshatclasses.example</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- AUTH MODAL (Login / Register) -->
+  
+   
+  <!-- FOOTER -->
+  <footer class="mt-20 border-t border-white/10 bg-black/90 text-white">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-10">
+
+    <!-- About -->
+    <div>
+      <h2 class="text-xl font-extrabold text-yellow-400 mb-3">AKSHAT COMPUTER CLASSES</h2>
+      <p class="text-sm text-white/70">
+        Learn computer skills, get certified, and upgrade your career with practical training and expert guidance.
+      </p>
+      <!-- Social Icons -->
+      <div class="flex gap-4 mt-5">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="hover:text-yellow-400">
+          <!-- Facebook Icon -->
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M22 12a10 10 0 10-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6V12H17l-.5 3h-2.7v7A10 10 0 0022 12z"/>
+          </svg>
+        </a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="hover:text-yellow-400">
+          <!-- Instagram Icon -->
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.8-.9a1.1 1.1 0 11-2.2 0 1.1 1.1 0 012.2 0z"/>
+          </svg>
+        </a>
+        <a href="https://wa.me/919540126204" target="_blank" aria-label="WhatsApp" class="hover:text-yellow-400">
+          <!-- WhatsApp Icon -->
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 .5a11.5 11.5 0 00-9.8 17.7L1 23l5-1.3A11.5 11.5 0 1012 .5zm0 2a9.5 9.5 0 019.5 9.5c0 5.3-4.3 9.5-9.5 9.5a9.5 9.5 0 01-4.8-1.3l-.3-.2-3 .8.8-2.9-.2-.3A9.5 9.5 0 0112 2.5zm-2.1 4.7c-.3 0-.8 0-1.2.6-.4.7-1.2 2.2-1.2 2.7s.6 1.3 1.4 2.1c.7.7 2.1 1.8 3.6 2.4 1.8.7 2.2.6 2.6.6.4 0 1.3-.5 1.5-1 .2-.5.2-.9.1-1-.1-.1-.4-.2-.9-.4s-1.3-.6-1.5-.6-.4 0-.6.3c-.2.3-.6.7-.7.8-.1.2-.3.2-.6.1-.3-.1-1.3-.5-2.5-1.6-1-1-1.6-2.2-1.8-2.5-.2-.3 0-.5.1-.6.1-.2.3-.4.5-.6.1-.2.2-.3.3-.5.1-.1.1-.2.1-.3 0-.1-.1-.3-.1-.5-.1-.2-.6-1.5-.8-2.1z"/>
+          </svg>
+        </a>
+        <a href="https://youtube.com" target="_blank" aria-label="YouTube" class="hover:text-yellow-400">
+          <!-- YouTube Icon -->
+          <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M23.5 6.2s-.2-1.6-.8-2.3c-.7-.8-1.5-.8-1.9-.9C18.2 2.7 12 2.7 12 2.7h0s-6.2 0-8.8.3c-.5.1-1.3.1-1.9.9C.7 4.6.5 6.2.5 6.2S0 8 0 9.9v1.8c0 1.9.5 3.7.5 3.7s.2 1.6.8 2.3c.7.8 1.7.8 2.2.9 1.6.2 6.5.3 8.5.3s6.9 0 8.5-.3c.5-.1 1.5-.1 2.2-.9.6-.7.8-2.3.8-2.3s.5-1.9.5-3.7V9.9c0-1.9-.5-3.7-.5-3.7zM9.6 14.6V7.8l6.4 3.4-6.4 3.4z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="text-lg font-semibold mb-4 text-yellow-400">Quick Links</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#home" class="hover:text-yellow-300">Home</a></li>
+        <li><a href="#all-courses" class="hover:text-yellow-300">Courses</a></li>
+        <li><a href="#notes" class="hover:text-yellow-300">PDF Notes</a></li>
+        <li><a href="#quiz" class="hover:text-yellow-300">Quiz</a></li>
+        <li><a href="#verify" class="hover:text-yellow-300">Verify Certificate</a></li>
+      </ul>
+    </div>
+
+    <!-- Support -->
+    <div>
+      <h3 class="text-lg font-semibold mb-4 text-yellow-400">Support</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#contact" class="hover:text-yellow-300">Contact Us</a></li>
+        <li><a href="#" class="hover:text-yellow-300">FAQs</a></li>
+        <li><a href="#" class="hover:text-yellow-300">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-yellow-300">Terms & Conditions</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div>
+      <h3 class="text-lg font-semibold mb-4 text-yellow-400">Get in Touch</h3>
+      <ul class="space-y-2 text-sm">
+        <li>📍 Agra, Uttar Pradesh, India</li>
+        <li>📞 <a href="tel:+919540126204" class="hover:text-yellow-300">+91 9540126204</a></li>
+        <li>✉️ <a href="mailto:info@akshatclasses.com" class="hover:text-yellow-300">info@akshatclasses.com</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bottom Strip -->
+  <div class="border-t border-white/10 bg-black/80">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 py-4 text-center text-sm text-white/60 flex flex-col md:flex-row items-center justify-between">
+      <p>© <span id="year"></span> AKSHAT COMPUTER CLASSES. All rights reserved.</p>
+      <div id="authStatus" class="text-white/80 mt-2 md:mt-0"></div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- APP SCRIPT -->
+  <script>
+    // ------- ROUTING & NAV -------
+    const pages = Array.from(document.querySelectorAll('.page'));
+    const links = Array.from(document.querySelectorAll('[data-route]'));
+    const showPage = (id) => {
+      pages.forEach(p => p.classList.remove('active'));
+      const el = document.querySelector(id) || document.querySelector('#home');
+      el.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Close mobile menu
+      document.getElementById('mobileNav').classList.add('hidden');
+    };
+    window.addEventListener('hashchange', () => showPage(location.hash || '#home'));
+    links.forEach(a => a.addEventListener('click', (e) => {
+      // rely on hashchange
+    }));
+
+    // Mobile menu toggle
+    document.getElementById('btnMobileMenu').addEventListener('click', () => {
+      document.getElementById('mobileNav').classList.toggle('hidden');
+    });
+
+    // ------- DATA -------
+    const COURSE_LIST = [
+      { name: 'Basic Computer (Office)', duration: '2 Months', fee: 2500 },
+      { name: 'Tally + GST', duration: '3 Months', fee: 4500 },
+      { name: 'Graphic Design (PS + AI)', duration: '4 Months', fee: 6500 },
+      { name: 'Web Development (HTML/CSS/JS)', duration: '4 Months', fee: 7000 },
+      { name: 'Python Programming', duration: '3 Months', fee: 6000 },
+      { name: 'C/C++ Foundation', duration: '2 Months', fee: 4000 },
+    ];
+
+    const QUIZ = [
+      { q: 'CPU ka full form?', opts: ['Central Processing Unit', 'Computer Personal Unit', 'Central Print Unit', 'Control Processing Utility'], ans: 0 },
+      { q: 'RAM kis type ki memory hai?', opts: ['Permanent', 'Volatile', 'Optical', 'Magnetic'], ans: 1 },
+      { q: 'MS Word me text ko bold karne ka shortcut?', opts: ['Ctrl + I', 'Ctrl + B', 'Ctrl + U', 'Ctrl + P'], ans: 1 },
+      { q: 'Web pages banane ke liye basic language?', opts: ['C', 'Java', 'HTML', 'Python'], ans: 2 },
+      { q: 'Spreadsheet software ka example?', opts: ['MS Excel', 'MS Word', 'Photoshop', 'Illustrator'], ans: 0 },
+    ];
+
+    const CERT_DB = {
+      'AKS-2025-00123': { name: 'Riya Sharma', course: 'Basic Computer', grade: 'A' },
+      'AKS-2025-00999': { name: 'Mohit Verma', course: 'Web Development', grade: 'A+' },
+    };
+
+    // ------- HELPERS -------
+    const byId = (id) => document.getElementById(id);
+    const waLink = (courseName) => `https://wa.me/919540126204?text=${encodeURIComponent('Hi AKSHAT Classes, I want to enroll in: ' + courseName)}`;
+
+    // ------- RENDER COURSES -------
+    const cardHTML = (c) => `
+      <article class="rounded-2xl border border-white/10 bg-white/5 p-6 flex flex-col justify-between">
+        <div>
+          <h3 class="text-xl font-bold">${c.name}</h3>
+          <p class="text-white/80 mt-1">Duration: <span class="text-white">${c.duration}</span></p>
+          <p class="text-white/80">Fee: <span class="text-brandYellow font-semibold">₹${c.fee}</span></p>
+        </div>
+        <a target="_blank" href="${waLink(c.name)}" class="mt-4 inline-flex items-center justify-center px-4 py-2 rounded-xl bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-bold shadow-lg">Enroll on WhatsApp</a>
+      </article>`;
+
+    byId('coursesGrid').innerHTML = COURSE_LIST.slice(0, 3).map(cardHTML).join('');
+    byId('allCoursesGrid').innerHTML = COURSE_LIST.map(cardHTML).join('');
+
+    // NOTES cards (click anywhere to WhatsApp)
+    byId('notesGrid').innerHTML = COURSE_LIST.map(c => `
+      <button onclick="window.open('${waLink(c.name + ' — Need PDF notes')}', '_blank')" class="text-left rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition group">
+        <h3 class="text-xl font-bold">${c.name}</h3>
+        <p class="text-white/80 mt-1">Duration: <span class="text-white">${c.duration}</span></p>
+        <p class="text-white/80">Fee: <span class="text-brandYellow font-semibold">₹${c.fee}</span></p>
+        <span class="mt-3 inline-flex items-center gap-2 text-black font-bold px-3 py-1 rounded-lg bg-gradient-to-r from-yellow-400 to-yellow-600">Get Notes on WhatsApp →</span>
+      </button>
+    `).join('');
+
+    // ------- QUIZ RENDER & SCORE -------
+    const quizForm = byId('quizForm');
+    QUIZ.forEach((item, i) => {
+      const block = document.createElement('div');
+      block.className = 'rounded-2xl border border-white/10 bg-white/5 p-5';
+      block.innerHTML = `
+        <p class="font-semibold">Q${i+1}. ${item.q}</p>
+        <div class="mt-3 grid sm:grid-cols-2 gap-2">
+          ${item.opts.map((opt, j) => `
+            <label class="flex items-center gap-2 px-3 py-2 rounded-xl bg-black/30">
+              <input type="radio" name="q${i}" value="${j}" class="accent-yellow-400" />
+              <span>${opt}</span>
+            </label>
+          `).join('')}
+        </div>`;
+      quizForm.appendChild(block);
+    });
+
+    byId('submitQuiz').addEventListener('click', () => {
+      let score = 0;
+      QUIZ.forEach((item, i) => {
+        const sel = quizForm.querySelector(`input[name=q${i}]:checked`);
+        if (sel && Number(sel.value) === item.ans) score++;
+      });
+      const result = `You scored ${score} / ${QUIZ.length}`;
+      byId('quizResult').textContent = result;
+      byId('quizResult').className = 'mt-4 text-xl font-extrabold ' + (score >= 4 ? 'text-green-300' : 'text-yellow-300');
+    });
+
+    // ------- CERTIFICATE VERIFY -------
+    byId('btnVerify').addEventListener('click', () => {
+      const id = byId('certId').value.trim();
+      const info = CERT_DB[id];
+      const box = byId('verifyResult');
+      if (info) {
+        box.innerHTML = `<div class='rounded-xl border border-green-400/30 bg-green-400/10 p-4'>✅ Valid Certificate<br><span class='text-white/80'>Name:</span> <strong>${info.name}</strong><br><span class='text-white/80'>Course:</span> <strong>${info.course}</strong><br><span class='text-white/80'>Grade:</span> <strong>${info.grade}</strong></div>`;
+      } else {
+        box.innerHTML = `<div class='rounded-xl border border-red-400/30 bg-red-400/10 p-4'>❌ Invalid or Not Found</div>`;
+      }
+    });
+
+    // ------- AUTH (LOCALSTORAGE) -------
+    const auth = {
+      key: 'akshat_users',
+      currentKey: 'akshat_current',
+      _load() { return JSON.parse(localStorage.getItem(this.key) || '[]'); },
+      _save(list) { localStorage.setItem(this.key, JSON.stringify(list)); },
+      register(name, email, pass) {
+        const users = this._load();
+        if (users.find(u => u.email === email)) throw new Error('Email already registered');
+        users.push({ name, email, pass });
+        this._save(users);
+        localStorage.setItem(this.currentKey, JSON.stringify({ name, email }));
+      },
+      login(email, pass) {
+        const users = this._load();
+        const u = users.find(u => u.email === email && u.pass === pass);
+        if (!u) throw new Error('Invalid credentials');
+        localStorage.setItem(this.currentKey, JSON.stringify({ name: u.name, email: u.email }));
+      },
+      logout() { localStorage.removeItem(this.currentKey); },
+      me() { return JSON.parse(localStorage.getItem(this.currentKey) || 'null'); },
+      reset(email) {
+        const users = this._load();
+        const u = users.find(u => u.email === email);
+        if (!u) throw new Error('Email not found');
+        // For demo: set password to '123456'
+        u.pass = '123456';
+        this._save(users);
+        return 'Password reset to 123456 (demo)';
+      }
+    };
+
+    // Modal controls
+    const authModal = byId('authModal');
+    const openAuth = () => authModal.classList.remove('hidden');
+    const closeAuth = () => authModal.classList.add('hidden');
+    byId('btnOpenAuth').addEventListener('click', openAuth);
+    byId('btnOpenAuth2').addEventListener('click', openAuth);
+    byId('btnCloseAuth').addEventListener('click', closeAuth);
+
+    // Tabs
+    const tabLogin = byId('tabLogin');
+    const tabRegister = byId('tabRegister');
+    const formLogin = byId('formLogin');
+    const formRegister = byId('formRegister');
+    const authMsg = byId('authMsg');
+
+    const setTab = (tab) => {
+      const isLogin = tab === 'login';
+      formLogin.classList.toggle('hidden', !isLogin);
+      formRegister.classList.toggle('hidden', isLogin);
+      tabLogin.classList.toggle('bg-white/10', isLogin);
+      tabRegister.classList.toggle('bg-white/10', !isLogin);
+      authMsg.textContent = '';
+    };
+    tabLogin.addEventListener('click', () => setTab('login'));
+    tabRegister.addEventListener('click', () => setTab('register'));
+
+    // Submit handlers
+    formRegister.addEventListener('submit', (e) => {
+      e.preventDefault();
+      try {
+        auth.register(byId('regName').value.trim(), byId('regEmail').value.trim(), byId('regPassword').value);
+        authMsg.textContent = 'Registration successful. You are now logged in!';
+        authMsg.className = 'mt-3 text-sm text-green-300';
+        renderAuthStatus();
+        closeAuth();
+      } catch (err) {
+        authMsg.textContent = err.message;
+        authMsg.className = 'mt-3 text-sm text-red-300';
+      }
+    });
+
+    formLogin.addEventListener('submit', (e) => {
+      e.preventDefault();
+      try {
+        auth.login(byId('loginEmail').value.trim(), byId('loginPassword').value);
+        authMsg.textContent = 'Login successful!';
+        authMsg.className = 'mt-3 text-sm text-green-300';
+        renderAuthStatus();
+        closeAuth();
+      } catch (err) {
+        authMsg.textContent = err.message;
+        authMsg.className = 'mt-3 text-sm text-red-300';
+      }
+    });
+
+    byId('btnForgot').addEventListener('click', () => {
+      const email = prompt('Enter your registered email to reset password:');
+      if (!email) return;
+      try {
+        const msg = auth.reset(email.trim());
+        alert(msg);
+      } catch(err) {
+        alert(err.message);
+      }
+    });
+
+    // Footer auth status
+    function renderAuthStatus() {
+      const status = byId('authStatus');
+      const me = auth.me();
+      if (me) {
+        status.innerHTML = `Logged in as <strong>${me.name}</strong> (<span class='text-yellow-300'>${me.email}</span>) · <button id='btnLogout' class='underline underline-offset-4 decoration-yellow-400'>Logout</button>`;
+        // add logout handler
+        setTimeout(() => {
+          const btn = byId('btnLogout');
+          btn && btn.addEventListener('click', () => { auth.logout(); renderAuthStatus(); });
+        }, 0);
+      } else {
+        status.textContent = 'Not logged in';
+      }
+    }
+
+    // Init
+    document.getElementById('year').textContent = new Date().getFullYear();
+    renderAuthStatus();
+    showPage(location.hash || '#home');
+  </script>
+</body>
+</html>
